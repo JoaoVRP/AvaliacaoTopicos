@@ -16,7 +16,9 @@ export class CadastrarComponent implements OnInit {
   colunasCredito = ["nome", "valor"];
   colunasDebito = ["nome","valor","status"];
 
-  data!: string;
+  nome!: string;
+  barras!: string;
+  preco!: string;
 
   nomeCredito!: string;
   valorCredito!: string;
@@ -37,7 +39,7 @@ export class CadastrarComponent implements OnInit {
    }
 
   cadastrar(): void {
-    let ciclo = new Ciclo();
+    /*let ciclo = new Ciclo();
     ciclo.data = new Date(this.data);
     ciclo.creditos = this.creditos.data;
     ciclo.debitos = this.debitos.data;
@@ -49,7 +51,7 @@ export class CadastrarComponent implements OnInit {
         verticalPosition: "top",
       }) ;
       this.router.navigate([""]);
-    });
+    }); */
   }
 
   adicionarCredito(): void {
