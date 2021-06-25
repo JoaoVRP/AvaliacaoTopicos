@@ -2,7 +2,7 @@ mat-card-content{
     padding: 16px;
 }
 
-.mes{
+.campo{
     width: 50%;
     display: block;
 }
@@ -12,32 +12,6 @@ mat-card-content{
 
 mat-grid-tile{
     width: 100%;
-}
-
-.debito-credito{
-    display: flex;
-    width: 100%;
-    flex-direction: row;
-}
-
-.credito{
-    flex: 1;
-    margin-right: 8px;
-}
-.debito{
-    flex: 1;
-    margin-left: 8px;
-}
-
-.conteudo-credito{
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-}
-.conteudo-debito{
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
 }
 
 table{

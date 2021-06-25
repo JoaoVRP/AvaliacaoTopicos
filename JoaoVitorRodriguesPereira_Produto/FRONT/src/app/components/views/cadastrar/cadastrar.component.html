@@ -1,17 +1,17 @@
 <mat-card>
   <mat-card-title> Novo Produto </mat-card-title>
   <mat-card-content>
-    <mat-form-field class="mes">
+    <mat-form-field class="campo">
       <mat-label for="nome">Nome</mat-label>
       <input matInput placeholder="Digite o nome do produto" type="text" name="nome" [(ngModel)]="nome" />
     </mat-form-field>
 
-    <mat-form-field class="mes">
+    <mat-form-field class="campo">
       <mat-label for="barras">Código de Barras</mat-label>
       <input matInput placeholder="Digite o código de barras do produto" type="text" name="barras" [(ngModel)]="barras" />
     </mat-form-field>
 
-    <mat-form-field class="mes">
+    <mat-form-field class="campo">
       <mat-label for="preco">Preço</mat-label>
       <input matInput placeholder="Digite o preço do produto" type="number" name="preco" [(ngModel)]="preco"  min="0.00" max="10000.00" step="0.01" />
 

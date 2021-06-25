@@ -1,0 +1,71 @@
+###
+GET http://localhost:3000/ciclo/listar
+
+###
+GET http://localhost:3000/ciclo/listar/6081fd969261e237bc5368e1
+
+### Requisição correta!
+POST http://localhost:3000/ciclo/cadastrar
+Content-Type: application/json
+
+{
+	"data": "2021-04-01",
+	"creditos": [
+		{
+			"nome": "Salário",
+			"valor": 5000
+		},
+		{
+			"nome": "Investimento",
+			"valor": 50
+		}
+	],
+	"debitos": [
+		{
+			"nome": "Luz",
+			"valor": 300,
+			"status": "PAGO"
+		},
+		{
+			"nome": "Água",
+			"valor": 150,
+			"status": "AGENDADO"
+		}
+	]
+}
+
+
+
+### Requisição com erro
+POST http://localhost:3000/ciclo/cadastrar
+Content-Type: application/json
+
+{
+	"creditos": [
+		{
+			"nome": "Salário",
+			"valor": 5000
+		},
+		{
+			"nome": "Investimento",
+			"valor": 50
+		}
+	],
+	"debitos": [
+		{
+			"nome": "Luz",
+			"valor": 300,
+			"status": "PAGO"
+		},
+		{
+			"nome": "Água",
+			"valor": 150,
+			"status": "AGENDADO"
+		}
+	]
+}
+
+# {
+# 	"data": "O campo data é obrigatório!",
+# 	"valor": "O campo valor é obrigatório"
+# }

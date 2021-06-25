@@ -6,8 +6,7 @@ class ProdutoController {
     try {
       const produto = await produtoSchema.find().exec();
       const msg = produto.length == 0 ? "Não existem produtos cadastrados" : "Produtos encontrados";
-      response.status(201).json({ data: produto, error: false, msg: msg
-  });
+      response.status(201).json(produto);
     } catch (error) {
       response.status(400).json({ data: error, error: true, msg: "Falha ao realizar a busca"
   });
@@ -16,7 +15,6 @@ class ProdutoController {
 
   async cadastrar(request: Request, response: Response) {
     try {
-
       const codigoBarras = request.body.codigoBarras;
       const produtoExiste = await produtoSchema.findOne({"codigoBarras": codigoBarras}).exec() != null;
     
@@ -27,10 +25,14 @@ class ProdutoController {
 
       var bodyToSend = request.body;
       bodyToSend["criadoEm"] = new Date().toISOString();
+      console.log("Produto vai ser criado");
       const produto = await produtoSchema.create(bodyToSend);
+      console.log("Produto criado");
       response.status(201).json({ data: produto, error: false, msg: "Produto cadastrado com sucesso!",
       });
     } catch (error) {
+      console.log("0abc");
+      console.log(error);
       response.status(400).json({ data: error, error: true, msg: "Não foi possível cadastrar o produto.",
       });
     }
